@@ -28,9 +28,7 @@ jobs:
         run: npm install jsonabc
 
       - name: Run Language Sorting
-        run: |
-        cd RotorHazard
-        node -e "const fs = require('fs'); const jsonabc = require('jsonabc'); const data = JSON.parse(fs.readFileSync('./src/server/language.json')); fs.writeFileSync('./src/server/language.json', JSON.stringify(jsonabc.sortObj(data), null, 2));"
+        run: node -e "const fs = require('fs'); const jsonabc = require('jsonabc'); const data = JSON.parse(fs.readFileSync('/src/server/language.json')); fs.writeFileSync('/src/server/language.json', JSON.stringify(jsonabc.sortObj(data), null, 2));"
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
