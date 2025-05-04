@@ -34,4 +34,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: 'Sort language.json file'
-          file_pattern: '/src/server/language.json'
+          file_pattern: './src/server/language.json'
